@@ -1,0 +1,26 @@
+{
+  "name": "weatherjournalapp",
+  "version": "1.0.0",
+  "description": "project made for udacity frontend nano-degree submission",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kareem00101/KA-WeatherApp-P2UDACITY.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kareem00101/KA-WeatherApp-P2UDACITY/issues"
+  },
+  "homepage": "https://github.com/Kareem00101/KA-WeatherApp-P2UDACITY#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node": "^16.11.1"
+  }
+}
