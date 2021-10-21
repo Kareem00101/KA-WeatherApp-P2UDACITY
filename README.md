@@ -1,10 +1,33 @@
 # Weather-Journal App Project
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This project is used to create an asynchronous web app that uses Web API and user data to dynamically update the UI.
+In this project I used a weather API from https://openweathermap.org/api so that we can the weather data.
+This project was made for Udacity Front-End Nano-Degree Program submissions.
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+## More Details
+In the server.js we set up our express app, port, server and handle the routes.
+In the app.js we will setup some dynamic functions, and most importantly everything related to the weather API.
+The HTML-CSS has almost no changes compared to the template provided by Udacity.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+## Useful Resources
+### special thanks:
+First thanks for the Udacity Nano-degree front-end development program, i was able to learn many things from it.
+Note: I never copied from these resources, they were just used as a review of how is the project is supposed to act like and to help understand somethings.
+### helpful youtube videos:
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU
+https://www.youtube.com/watch?v=7IvDf6ksjlA
+https://www.youtube.com/watch?v=-CZgW5ndSeQ
+
+### helpful websites:
+https://openweathermap.org/api
+https://reactgo.com/express-redirect/
+
+### helpful github repos:
+https://github.com/harshitagupta30/weather-journal-app
+https://github.com/MindaugasPaz/Weather-Journal-App
+https://github.com/tem-nik/Weather-Journal-App
+https://github.com/rehmanz/weather-journal-app
+
+
+
