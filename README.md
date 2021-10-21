@@ -22,6 +22,7 @@ https://www.youtube.com/watch?v=-CZgW5ndSeQ
 ### helpful websites:
 https://openweathermap.org/api
 https://reactgo.com/express-redirect/
+https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
 
 ### helpful github repos:
 https://github.com/harshitagupta30/weather-journal-app
