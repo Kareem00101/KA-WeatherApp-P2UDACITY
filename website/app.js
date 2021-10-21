@@ -21,7 +21,7 @@ function getUserInput(){
 
 function validateZip(zip){
     // US zip code is 5 digits
-    if(zip>00000 && zip<99999){
+    if(zip>=00000 && zip<=99999){
         return;
     }else console.log("Invalid zip code input!");
 }
