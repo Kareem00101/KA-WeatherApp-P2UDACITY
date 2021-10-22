@@ -1,5 +1,3 @@
-/* Global Variables */
-
 // API credentials and url 
 const baseURL = 'api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&appid=8d143f4de42234bc4eb01542de2d28ad';
@@ -17,14 +15,23 @@ function getUserInput(){
         userZIP: document.getElementById('zip').value,
         userFeelings: document.getElementById('feelings').value
     };
-}
+};
 
+// Function to validate zip
 function validateZip(zip){
     // US zip code is 5 digits
     if(zip>=00000 && zip<=99999){
         return;
     }else console.log("Invalid zip code input!");
-}
+};
+
+// Function to update HTML elements
+function updateIndex(data){
+    document.getElementById('date').innerHTML = data.date;
+    document.getElementById('temp').innerHTML = data.temp;
+    document.getElementById('content').innerHTML = data.content;
+};
+
 // Action performed on clicking generate
 function generateData(e){
     // Prevent default, prevent any other action other than specified here
@@ -47,10 +54,24 @@ function generateData(e){
         // Naming was done according to the project Rubric
         postData('/add/weather-data', {date: newDate, temp: apiData.main.temp, content: userFeelings});
     }).then(function(){
-        //updateGUI();
+        updateGUI();
     }).catch(function(err){
         console.log("Error has occurred during posting: ", err);
     })
+};
+
+// Function to update the GUI
+const updateGUI = async () => {
+    // Awaiting project data
+    const request = await fetch('/live-weather');
+    // As said before every async function should have try and catch
+    try{
+        const finalData = await request.json();
+        // Finally! Time to update HTML index
+        updateIndex(finalData);
+    } catch(err){
+        console.log("Error while updating GUI", err);
+    }
 };
 
 // Calling the API and getting the weather data

@@ -52,8 +52,8 @@ app.post('/add/weather-data', (req, res) =>{
     // We need to check if the body exists
    if(req.body){
         // We don't need all the request body, so we can just pick the variables we want
-        projectData.temp = req.body.temp;
         projectData.date = req.body.date;
+        projectData.temp = req.body.temp;
         projectData.content = req.body.content;
         res.end();
         // For testing purposes
