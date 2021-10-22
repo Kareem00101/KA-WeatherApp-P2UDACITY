@@ -6,7 +6,7 @@ const apiKey = '&appid=8d143f4de42234bc4eb01542de2d28ad';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Add the event listener for the generate button
 document.getElementById('generate').addEventListener('click', generateData);
@@ -32,7 +32,7 @@ function generateData(e){
     // Perhaps if the user clicks the generate button, this means that he probably have entered the data so let's catch it
     const {userZIP, userFeelings} = getUserInput();
     // Validating user input
-    var x = parseInt(userZip, 10);
+    var x = parseInt(userZIP, 10);
     if(!Number.isNaN(x)){
         validateZip(x);
     }else{

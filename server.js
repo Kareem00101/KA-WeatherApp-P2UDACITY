@@ -11,7 +11,7 @@ const cors = require('cors');
 const { response } = require('express');
 
 // Start up an instance of app
-const app = express.app();
+const app = express();
 
 /* 
 *
@@ -52,9 +52,9 @@ app.post('/add/weather-data', (req, res) =>{
     // We need to check if the body exists
    if(req.body){
         // We don't need all the request body, so we can just pick the variables we want
-        projectData.temperature = req.body.temperature;
+        projectData.temp = req.body.temp;
         projectData.date = req.body.date;
-        projectData.userResponse = req.body.user-response;
+        projectData.content = req.body.content;
         res.end();
         // For testing purposes
         console.log("The request body: ", req.body);
