@@ -1,5 +1,5 @@
 // API credentials and url 
-const baseURL = 'api.openweathermap.org/data/2.5/weather?zip=';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&appid=8d143f4de42234bc4eb01542de2d28ad';
 
 // Create a new date instance dynamically with JS
@@ -27,9 +27,9 @@ function validateZip(zip){
 
 // Function to update HTML elements
 function updateIndex(data){
-    document.getElementById('date').innerHTML = data.date;
-    document.getElementById('temp').innerHTML = data.temp;
-    document.getElementById('content').innerHTML = data.content;
+    document.getElementById('date').innerHTML = `Today's Date: ${data.date}`;
+    document.getElementById('temp').innerHTML = `Current Temperature: ${data.temp} fahrenheit`;
+    document.getElementById('content').innerHTML = `Feeling: ${data.content}`;
 };
 
 // Action performed on clicking generate
@@ -52,7 +52,7 @@ function generateData(e){
         */
         // Posting the data
         // Naming was done according to the project Rubric
-        postData('/add/weather-data', {date: newDate, temp: apiData.main.temp, content: userFeelings});
+        postData('http://localhost:3000/add/weather-data', {date: newDate, temp: apiData.main.temp, content: userFeelings});
     }).then(function(){
         updateGUI();
     }).catch(function(err){
